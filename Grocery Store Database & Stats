@@ -1,0 +1,31 @@
+-Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, aisle INTEGER, section TEXT);
+
+INSERT INTO store VALUES (1, "bananas", 2.99, 2, "produce");
+INSERT INTO store VALUES (2, "cereal", 4.99, 7, "breakfast");
+INSERT INTO store VALUES (3, "turkey", 6.99, 4, "deli");
+INSERT INTO store VALUES (4, "milk", 2.99, 9, "dairy");
+INSERT INTO store VALUES (5, "toothpaste", 3.99, 5, "hygiene");
+INSERT INTO store VALUES (6, "pineapple", 4.99, 2, "produce");
+INSERT INTO store VALUES (7, "popcorn", 2.99, 3, "snacks");
+INSERT INTO store VALUES (8, "chocolate", 1.99, 3, "candy");
+INSERT INTO store VALUES (9, "shampoo", 5.99, 5, "hygiene");
+INSERT INTO store VALUES (10, "butter", 1.99, 9, "dairy");
+INSERT INTO store VALUES (11, "chips", 3.99, 3, "snacks");
+INSERT INTO store VALUES (12, "salami", 6.99, 4, "deli");
+INSERT INTO store VALUES (13, "bread", 3.99, 1, "bakery");
+INSERT INTO store VALUES (14, "cake", 7.99, 1, "bakery");
+INSERT INTO store VALUES (15, "cheese", 2.99, 9, "dairy");
+
+-display database ordered by price
+
+SELECT * FROM store ORDER BY price;
+
+-What is the most expensive item from the store?
+
+SELECT MAX(price) FROM store;
+
+-What is the average price of the dairy items?
+
+SELECT AVG(price) "avg dairy item price" FROM store WHERE section='dairy';
